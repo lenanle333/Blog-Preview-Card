@@ -1,0 +1,115 @@
+@import "mixins";
+@import "variables";
+@import "reset";
+
+body {
+	@include flex-center;
+	height: 100vh;
+	background-color: $primary;
+	font-family: Figtree, sans-serif;
+	line-height: 150%;
+}
+#card {
+	width: rem(327);
+	height: rem(501);
+	background-color: $white;
+	border-radius: rem(20);
+	border: $black rem(1) solid;
+	box-shadow: $black 10px 10px;
+	transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+	transition: all 0.5s ease-out;
+	&:hover {
+		transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
+		box-shadow: $black 15px 15px;
+
+		backface-visibility: hidden;
+	}
+	#illustration {
+		height: rem(200);
+		width: rem(279);
+		border-radius: rem(10);
+		margin: rem(20) rem(24) rem(12) rem(24);
+		transition: 0.3s ease-in-out;
+	}
+	#card-info {
+		margin: 0 rem(24) rem(24) rem(24);
+		display: grid;
+		gap: rem(12);
+		#category {
+			@include flex-center;
+			background-color: $primary;
+			padding: rem(2) 0;
+			border-radius: rem(4);
+			width: rem(73);
+			height: rem(26);
+			h1 {
+				font-weight: 800;
+				font-size: rem(12);
+			}
+		}
+		#published-date {
+			font-weight: 500;
+			font-size: rem(12);
+		}
+		h2 {
+			cursor: pointer;
+			font-weight: 800;
+			font-size: rem(20);
+			transition: all 0.1s ease;
+			&:hover {
+				color: $primary;
+			}
+		}
+		#card-description {
+			font-weight: 500;
+			font-size: rem(14);
+			color: $gray;
+		}
+	}
+	#author {
+		margin: 0 rem(24);
+		@include flex-h-center;
+		#avatar {
+			width: rem(32);
+		}
+		#author-name {
+			font-weight: 800;
+			font-size: rem(14);
+			margin-left: rem(12);
+		}
+	}
+}
+@include desktop {
+	#card {
+		width: rem(384);
+		height: rem(522);
+		#illustration {
+			height: rem(200);
+			width: rem(336);
+			margin-bottom: rem(16);
+		}
+		#card-info {
+			margin: 0 rem(24) rem(24) rem(24);
+			display: grid;
+			gap: rem(12);
+			#category {
+				@include flex-center;
+
+				width: rem(82);
+				height: rem(29);
+				h1 {
+					font-size: rem(14);
+				}
+			}
+			#published-date {
+				font-size: rem(14);
+			}
+			h2 {
+				font-size: rem(24);
+			}
+			#card-description {
+				font-size: rem(16);
+			}
+		}
+	}
+}

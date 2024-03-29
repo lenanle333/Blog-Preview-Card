@@ -1,0 +1,137 @@
+@font-face {
+  font-family: Figtree;
+  src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+html,
+body,
+div,
+h1,
+h2,
+p,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(47, 88%, 63%);
+  font-family: Figtree, sans-serif;
+  line-height: 150%;
+}
+
+#card {
+  width: 20.4375rem;
+  height: 31.3125rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.25rem;
+  border: hsl(0, 0%, 7%) 0.0625rem solid;
+  box-shadow: hsl(0, 0%, 7%) 10px 10px;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  transition: all 0.5s ease-out;
+}
+#card:hover {
+  transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
+  box-shadow: hsl(0, 0%, 7%) 15px 15px;
+  backface-visibility: hidden;
+}
+#card #illustration {
+  height: 12.5rem;
+  width: 17.4375rem;
+  border-radius: 0.625rem;
+  margin: 1.25rem 1.5rem 0.75rem 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+#card #card-info {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+#card #card-info #category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(47, 88%, 63%);
+  padding: 0.125rem 0;
+  border-radius: 0.25rem;
+  width: 4.5625rem;
+  height: 1.625rem;
+}
+#card #card-info #category h1 {
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+#card #card-info #published-date {
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+#card #card-info h2 {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.25rem;
+  transition: all 0.1s ease;
+}
+#card #card-info h2:hover {
+  color: hsl(47, 88%, 63%);
+}
+#card #card-info #card-description {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 50%);
+}
+#card #author {
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+}
+#card #author #avatar {
+  width: 2rem;
+}
+#card #author #author-name {
+  font-weight: 800;
+  font-size: 0.875rem;
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 1440px) {
+  #card {
+    width: 24rem;
+    height: 32.625rem;
+  }
+  #card #illustration {
+    height: 12.5rem;
+    width: 21rem;
+    margin-bottom: 1rem;
+  }
+  #card #card-info {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+  #card #card-info #category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.125rem;
+    height: 1.8125rem;
+  }
+  #card #card-info #category h1 {
+    font-size: 0.875rem;
+  }
+  #card #card-info #published-date {
+    font-size: 0.875rem;
+  }
+  #card #card-info h2 {
+    font-size: 1.5rem;
+  }
+  #card #card-info #card-description {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=index.css.map */
